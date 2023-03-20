@@ -35,6 +35,13 @@ function App()
 				<input type="number" value={amount} onChange={e => setAmount(e.target.value)}/>
 				<button>Add</button>
 			</div>
+			<div>
+				<ol>
+					{items?.map(item => (
+						<li key={item.id}>{item.description}</li>
+					))}
+				</ol>
+			</div>
 		</form>
 	);
 }
